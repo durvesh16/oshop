@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { RouterModule } from '@angular/router';
@@ -61,7 +62,9 @@ import { LoginComponent } from './login/login.component';
 
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
